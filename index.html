@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/9bc08b0e45.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&family=Rowdies:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <title>Login Page</title>
+</head>
+
+<body class="overscroll-none select-none m-0 p-0">
+    <Section>
+        <img src="./Asset/bg.jpg" class="relative h-[100vh] w-[100vw] bg-cover">
+        <button id="theme" class="absolute right-7 top-4 font-extrabold text-xl" onclick="darkmode()">
+            Turn off Lights<i class="fa-regular fa-sun pl-2" style="color: #FFD43B;"></i>
+        </button>
+        <div id="blackbox" class="hidden absolute top-0 left-0 h-[100vh] w-[100vw] bg-black opacity-90">
+            <button id="theme" class="absolute right-7 top-4 font-extrabold text-xl" onclick="darkmode()">
+                Turn on Lights<i class="fa-regular fa-sun pl-2" style="color: #b7b5b5;"></i>
+            </button>
+        </div>
+        <div>
+            <div class="h-[60%] w-[75%] mx-[13%] bg-black opacity-65 absolute top-32 sm:w-[45%] sm:mx-[28%] lg:w-[30%] lg:mx-[35%] xl:w-[25%] xl:mx-[37.5%] xl:top-36 2xl:top-44 rounded-lg">
+            </div>
+            <div>
+                <h1 class="absolute ml-[20%] top-36 sm:ml-[29%] lg:ml-[36%] xl:ml-[39%] xl:top-40 2xl:top-48 text-white heading text-3xl 2xl:text-4xl">
+                    Login Form
+                </h1>
+                <form>
+                    <input type="email" required class="p-2 mail absolute ml-[20%] top-36 sm:ml-[30%] lg:ml-[36%] xl:top-40 2xl:top-52 mt-16 pt-2 mb-2 pb-2 w-[60%] sm:w-[40%] lg:w-[28%] xl:w-[20%] xl:mx-[40%] bg-transparent border-b-4 border-solid border-white text-white" placeholder="Email Address">  
+                    <input type="password" required class="p-2 pass mt-[40%] absolute ml-[20%] top-36 sm:ml-[30%] sm:mt-[22%] md:mt-[20%] lg:ml-[36%] lg:mt-[14%] xl:top-40 xl:mt-[12%] xl:w-[20%] xl:mx-[40%] 2xl:mt-[11%] 2xl:top-52 pt-2 mb-2 pb-2 w-[60%] sm:w-[40%] lg:w-[28%] bg-transparent border-b-4 border-solid border-white text-white" placeholder="Password">
+                    <button class="p-2 mt-[65%] absolute ml-[20%] top-36 sm:ml-[30%] sm:mt-[35%] md:mt-[30%] lg:ml-[36%] lg:mt-[23%] xl:top-40 xl:mt-[20%] xl:w-[20%] xl:mx-[40%] 2xl:mt-[18%] 2xl:top-52 pt-2 mb-2 pb-2 w-[60%] sm:w-[40%] lg:w-[28%] border-4 border-solid border-white text-white rounded-full">
+                        Login<i class="fa-solid fa-right-to-bracket pl-2" style="color: #75bef5;"></i>
+                    </button>
+                </form>
+                <hr class="p-2 mt-[90%] absolute ml-[20%] top-36 sm:ml-[30%] sm:mt-[50%] md:mt-[40%] lg:ml-[36%] lg:mt-[30%] xl:top-40 xl:mt-[26%] xl:w-[20%] xl:mx-[40%] 2xl:mt-[25%] 2xl:top-52 pt-2 mb-2 pb-2 w-[60%] sm:w-[40%] lg:w-[28%]">
+                <p class="p-2 mt-[90%] absolute ml-[20%] top-36 sm:ml-[30%] sm:mt-[50%] md:mt-[42%] lg:ml-[36%] lg:mt-[31%] xl:top-40 xl:mt-[26%] xl:mx-[40%] 2xl:mt-[27%] 2xl:top-52 pt-2 mb-2 pb-2 text-white">
+                    Don't have an account?
+                    <br class="sm:hidden">
+                    <u><a>Register Now</a></u>
+                </p>
+            </div>
+        </div>
+
+    <script src="index.js"></script>
+
+    </Section>
+</body>
+</html>
