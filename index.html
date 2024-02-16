@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/9bc08b0e45.js" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nova+Square&family=Rowdies:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-
     <title>Login Page</title>
 </head>
-
 <body class="overscroll-none select-none m-0 p-0">
     <Section>
         <img src="./Asset/bg.jpg" class="relative h-[100vh] w-[100vw] bg-cover">
@@ -32,7 +28,7 @@
         <div>
             <div class="h-[60%] w-[75%] mx-[13%] bg-black opacity-65 absolute top-32 sm:w-[45%] sm:mx-[28%] lg:w-[30%] lg:mx-[35%] xl:w-[25%] xl:mx-[37.5%] xl:top-36 2xl:top-44 rounded-lg">
             </div>
-            <div>
+            <div id="logf">
                 <h1 class="absolute ml-[20%] top-36 sm:ml-[29%] lg:ml-[36%] xl:ml-[39%] xl:top-40 2xl:top-48 text-white heading text-3xl 2xl:text-4xl">
                     Login Form
                 </h1>
@@ -47,13 +43,35 @@
                 <p class="p-2 mt-[90%] absolute ml-[20%] top-36 sm:ml-[30%] sm:mt-[50%] md:mt-[42%] lg:ml-[36%] lg:mt-[31%] xl:top-40 xl:mt-[26%] xl:mx-[40%] 2xl:mt-[27%] 2xl:top-52 pt-2 mb-2 pb-2 text-white">
                     Don't have an account?
                     <br class="sm:hidden">
-                    <u><a>Register Now</a></u>
+                    <button onclick="regin()">
+                        <u><a class="cursor-pointer">Register Now</a></u>
+                    </button>
+                </p>
+            </div>
+            <div class="hidden" id="regf">
+                <h1 class="absolute ml-[20%] top-36 sm:ml-[29%] lg:ml-[36%] xl:ml-[39%] xl:top-40 2xl:top-48 text-white heading text-2xl 2xl:text-3xl">
+                    Create Account
+                </h1>
+                <form>
+                    <input type="text" required class="p-2 user absolute ml-[20%] top-28 sm:ml-[30%] lg:ml-[36%] xl:top-36 2xl:top-48 mt-16 pt-2 mb-2 pb-2 w-[60%] sm:w-[40%] lg:w-[28%] xl:w-[20%] xl:mx-[40%] bg-transparent border-b-4 border-solid border-white text-white" placeholder="User Name">  
+                    <input type="email" required class="p-2 mail mt-[29%] absolute ml-[20%] top-36 sm:ml-[30%] sm:mt-[16%] md:mt-[13%] lg:ml-[36%] lg:mt-[10%] xl:top-40 xl:mt-[10%] xl:w-[20%] xl:mx-[40%] 2xl:mt-[9%] 2xl:top-52 pt-2 mb-2 pb-2 w-[60%] sm:w-[40%] lg:w-[28%] bg-transparent border-b-4 border-solid border-white text-white" placeholder="Email Address">
+                    <input type="password" required class="p-2 pass mt-[48%] absolute ml-[20%] top-36 sm:ml-[30%] sm:mt-[26%] md:mt-[22%] lg:ml-[36%] lg:mt-[17%] xl:top-40 xl:mt-[16%] xl:w-[20%] xl:mx-[40%] 2xl:mt-[15%] 2xl:top-52 pt-2 mb-2 pb-2 w-[60%] sm:w-[40%] lg:w-[28%] bg-transparent border-b-4 border-solid border-white text-white" placeholder="Password">
+                    <button class="p-2 mt-[68%] absolute ml-[20%] top-36 sm:ml-[30%] sm:mt-[38%] md:mt-[31%] lg:ml-[36%] lg:mt-[24%] xl:top-40 xl:mt-[21%] xl:w-[20%] xl:mx-[40%] 2xl:mt-[20%] 2xl:top-52 pt-2 mb-2 pb-2 w-[60%] sm:w-[40%] lg:w-[28%] border-4 border-solid border-white text-white rounded-full">
+                        Create Account<i class="fa-solid fa-right-to-bracket pl-2" style="color: #75bef5;"></i>
+                    </button>
+                </form>
+                <hr class="p-2 mt-[92%] absolute ml-[20%] top-36 sm:ml-[30%] sm:mt-[50%] md:mt-[40%] lg:ml-[36%] lg:mt-[30%] xl:top-40 xl:mt-[26%] xl:w-[20%] xl:mx-[40%] 2xl:mt-[25%] 2xl:top-52 pt-2 mb-2 pb-2 w-[60%] sm:w-[40%] lg:w-[28%]">
+                <p class="p-2 mt-[92%] absolute ml-[20%] top-36 sm:ml-[30%] sm:mt-[50%] md:mt-[42%] lg:ml-[36%] lg:mt-[31%] xl:top-40 xl:mt-[26%] xl:mx-[40%] 2xl:mt-[27%] 2xl:top-52 pt-2 mb-2 pb-2 text-white">
+                    Already have an account?
+                    <br class="sm:hidden">
+                    <button onclick="regin()">
+                        <u><a class="cursor-pointer">Sign In</a></u>
+                    </button>
                 </p>
             </div>
         </div>
-
-    <script src="index.js"></script>
-
+        <script src="./script/light.js"></script>
+        <script src="./script/regsiter.js"></script>
     </Section>
 </body>
 </html>
